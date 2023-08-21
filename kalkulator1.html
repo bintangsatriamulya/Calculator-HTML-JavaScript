@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <style>
+    .table{
+      background-color: cadetblue;
+      margin: 25px;
+      padding: 20px;
+    }
+  </style>
+  <script type="text/Javascript">
+    function tambah(){
+     var angka1=parseFloat(document.calculator.angka1.value);
+     var angka2=parseFloat(document.calculator.angka2.value);
+     var hasil= angka1+angka2;
+     document.calculator.hasil.value=hasil;
+    }
+    function kurang(){
+     var angka1=parseFloat(document.calculator.angka1.value);
+     var angka2=parseFloat(document.calculator.angka2.value);
+     var hasil= angka1-angka2;
+     document.calculator.hasil.value=hasil;
+    }
+    function kali(){
+     var angka1=parseFloat(document.calculator.angka1.value);
+     var angka2=parseFloat(document.calculator.angka2.value);
+     var hasil= angka1*angka2;
+     document.calculator.hasil.value=hasil;
+    }
+    function bagi(){
+     var angka1=parseFloat(document.calculator.angka1.value);
+     var angka2=parseFloat(document.calculator.angka2.value);
+     var hasil= angka1/angka2;
+     document.calculator.hasil.value=hasil;
+    }
+    
+    </script>
+</head>
+<body>
+    <h1 align="center">Calculator</h1>
+    
+    <!-- Bilangan Pertama -->
+  <form name="calculator">
+    <table class="table">
+      <!-- Bilangan  1 -->
+      <tr>
+        <td>Angka 1 : </td>
+        <td><input type="number" name="angka1"></td> 
+      </tr>
+      <!-- Bilangan 2 -->
+      <tr>
+        <td>Angka 2 : </td>
+        <td><input type="number" name="angka2"></td>
+      </tr>
+
+      <!-- Hasil -->
+      <tr>
+        <td>Hasil : </td>
+        <td><input type="number" name="hasil"></td>
+      </tr>
+
+      <!-- Operasi Aritmatika -->
+      <tr>
+        <td colspan="4" align="center">
+          <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+          <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+     
+          <input class="tombol" type="button" onclick="kali()" value="  *  ">
+          <input class="tombol" type="button" onclick="bagi()" value="  /  ">
+        </td>
+
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
